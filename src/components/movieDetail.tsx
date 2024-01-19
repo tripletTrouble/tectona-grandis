@@ -16,7 +16,7 @@ export default function MovieDetail() {
 
   if (!movie) {
     axios
-      .get(`http://www.omdbapi.com/?apikey=bf0d2a35&i=${id}`)
+      .get(`https://www.omdbapi.com/?apikey=bf0d2a35&i=${id}`)
       .then((resp) => {
         setMovie(resp.data);
       });

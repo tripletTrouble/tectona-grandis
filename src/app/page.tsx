@@ -13,7 +13,7 @@ export default function Home() {
   const handleNext = () => {
     axios
       .get(
-        `http://www.omdbapi.com/?s=${encodeURI(searchValue)}&apikey=bf0d2a35&page=${currentPage+1}`
+        `https://www.omdbapi.com/?s=${encodeURI(searchValue)}&apikey=bf0d2a35&page=${currentPage+1}`
       )
       .then((resp) => {
         if (resp.data.Response.toLowerCase() === "true") {
@@ -47,7 +47,7 @@ export default function Home() {
       const getData = setTimeout(() => {
         axios
           .get(
-            `http://www.omdbapi.com/?s=${encodeURI(
+            `https://www.omdbapi.com/?s=${encodeURI(
               searchValue
             )}&apikey=bf0d2a35`
           )
